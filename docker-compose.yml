@@ -1,0 +1,14 @@
+services:
+  sub2toimage:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: sub2toimage:local
+    restart: unless-stopped
+    environment:
+      CONFIG_PATH: /config/config.json
+      # 0 或留空表示只运行一次；43200 表示每 12 小时运行一次。
+      SCHEDULE_INTERVAL_SECONDS: "43200"
+      RUN_ON_START: "true"
+    volumes:
+      - ./config.json:/config/config.json:ro

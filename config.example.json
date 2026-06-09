@@ -1,0 +1,24 @@
+{
+  "source": {
+    "base_url": "",
+    "accounts_data_path": "/api/v1/admin/accounts/data",
+    "admin_key": "请在这里填写管理员密钥",
+    "admin_key_header": "Authorization",
+    "admin_key_scheme": "Bearer",
+    "status": "active",
+    "sort_by": "status",
+    "sort_order": "desc",
+    "timezone": "Asia/Shanghai"
+  },
+  "target": {
+    "base_url": "",
+    "accounts_path": "/api/accounts",
+    "token": "请在这里填写目标接口token",
+    "token_header": "Authorization",
+    "token_scheme": "Bearer",
+    "default_provider": ""
+  },
+  "request_timeout_seconds": 30,
+  "max_import_count": 0,
+  "dry_run": false
+}
